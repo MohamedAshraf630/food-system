@@ -10,11 +10,12 @@ class ViewUser extends View
 		$str .= "<h1>Welcome " . $this->model->getName() . "</h1>";
 		$str .= "<h5>Phone: " . $this->model->getPhoneNumber() . "</h5>";
 		$str .= "<br><br>";
-		$str .= '<div class="topnav">
-		<a href="profile.php?action=edit>Edit Profile </a><br><br>;
-	    <a href="profile.php?action=movie">My Movies </a><br><br>;
-		<a href="profile.php?action=signOut">SignOut </a><br><br>;
-		<a href="profile.php?action=delete">Delete Account </a>;</div>';
+		$str .= "<div class='topnav'>";
+		$str .="<a href='profile.php?action=edit'>Edit Profile </a><br><br>";
+		$str .= "<a href='profile.php?action=movie'>My Movies </a><br><br>";
+		$str .= "<a href='profile.php?action=signOut'>SignOut </a><br><br>";
+		$str .= "<a href='profile.php?action=delete'>Delete Account </a>";
+		$str .= "</div>";
 		return $str;
 	}
 
