@@ -4,16 +4,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Welcome to Fork&Spoon website for flight booking" />
+    <meta name="description" content="Welcome to Fork&Spoon website for Ordering System" />
     <meta name="author" content="" />
     <title>Fork&Spoon</title>
     <!-- Favicon-->
     <!-- <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" /> -->
     <!-- Bootstrap core JS + JQuery -->
     <!-- <link rel="stylesheet" href="/fork&spoon/assets/cssAngular/login.css"> -->
-    <script src="/fork&spoon/assets/js/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="/fork&spoon/assets/css/bootstrap.min.css">
-    <script src="/fork&spoon/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/food-system/assets/js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="/food-system/assets/css/bootstrap.min.css">
+    <script src="/food-system/assets/js/bootstrap.bundle.min.js"></script>
     <style>
     .holderimg {
       max-height: 50px;
@@ -36,20 +36,17 @@
     }
 
     //if user already logged in show navigation bar else do not show it in login screen
-    if (isset($user)) {
+if (isset($user)) {
         $customerFeatures = '';
         $qualityControl = '';
-        $customerService = '';
         if ($user['role'] === 'customer') {
-            $customerFeatures = '<a class="float-right pr-4" href="/fork&spoon/orders.php">My Orders</a>
-                                 <a class="float-right pr-4" href="/fork&spoon/cart.php">View Cart ' . $cart_count . '</a>';
-        } else if ($user['role'] === 'qualityControl') {
-            $qualityControl = '<a class="float-right pr-4" href="/fork&spoon/quality-control/reports.php">Reports</a>
-                               <a class="float-right pr-4" href="/fork&spoon/quality-control/comments.php">Traveler Comments</a>';
-        } else if ($user['role'] === 'customerService') {
-            $customerService = '<a class="float-right pr-4" href="/fork&spoon/customer-service/orders.php">Orders</a>';
-        }
-        echo '
+            $customerFeatures = '<a class="float-right pr-4" href="/food-system/orders.php">My Orders</a>
+                                 <a class="float-right pr-4" href="/food-system/cart.php">View Cart ' . $cart_count . '</a>';
+        } else if ($user['role'] === 'admin') {
+            $qualityControl = '<a class="float-right pr-4" href="/food-system/reports.php">Reports</a>
+                               <a class="float-right pr-4" href="/food-system/comments.php">Traveler Comments</a>';
+
+            echo '
         <div class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="/fork&spoon">
             <img class="holderimg" src="assets/tw.jpg">
@@ -61,10 +58,9 @@
             </div>
             ' . $customerFeatures . '
             ' . $qualityControl . '
-            ' . $customerService . '
-            <a class="float-right" href="/fork&spoon/services/logout-service.php">Logout</a>
+            <a class="float-right" href="/food-system/logout-service.php">Logout</a>
         </div>
         ';
+        }
     }
-
     ?>
