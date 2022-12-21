@@ -27,11 +27,17 @@ if(isset($_POST['login']))	{
 	}
 }
 ?>
+<style>
+	td strong{
+		font-weight:bold;
+font-size:50px;
+	}
+	</style>
 <table width='100%' align='center' >
 	<tr>
-		<td align="center">Login</td>
+		<td  align="center"><strong>Login<strong></td>
 		<td></td>
-		<td align="center">SignUp</td>
+		<td align="center"><strong>SignUp</strong></td>
 	</tr>
 	<tr>
 		<td width='40%' align="center"><?php echo $view->loginForm();?></td>
