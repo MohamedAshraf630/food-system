@@ -27,21 +27,34 @@ if(isset($_POST['login']))	{
 	}
 }
 ?>
-<style>
-	td strong{
-		font-weight:bold;
-font-size:50px;
-	}
-	</style>
-<table width='100%' align='center' >
-	<tr>
-		<td  align="center"><strong>Login<strong></td>
-		<td></td>
-		<td align="center"><strong>SignUp</strong></td>
-	</tr>
-	<tr>
-		<td width='40%' align="center"><?php echo $view->loginForm();?></td>
-		<td align="center">OR</td>
-		<td width='40%' align="center"><?php echo $view->signupForm();?></td>
-	</tr>
-</table>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="#">
+    <title>Home</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/animsition.min.css" rel="stylesheet">
+    <link href="../css/animate.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet"> </head>
+
+<body class="home">
+    <?php
+    echo $view->navigation();
+    echo $view->image();
+    echo $view->footer();
+    ?>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/tether.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/animsition.min.js"></script>
+    <script src="../js/bootstrap-slider.min.js"></script>
+    <script src="../js/jquery.isotope.min.js"></script>
+    <script src="../js/headroom.js"></script>
+    <script src="../js/foodpicky.min.js"></script>
+</body>
+
+</html>

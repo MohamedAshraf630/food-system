@@ -2,5 +2,5 @@
     define('DB_SERVER', "localhost");
     define('DB_USER', "root");
     define('DB_PASS', "");
-    define('DB_DATABASE', "fork_and_spoon_db");
+    define('DB_DATABASE', "onlinefoodphp");
  ?>
